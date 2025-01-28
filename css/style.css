@@ -924,6 +924,7 @@ pre {
   .col-md-12 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
+    justify-content: left;
     flex: 0 0 100%;
     max-width: 100%; }
   .order-md-first {
