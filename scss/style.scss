@@ -307,7 +307,7 @@ h1, h2, h3, h4, h5,
 
 		color: transparent;
 		line-height: .1vh;
-		-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+		-webkit-text-fill-color: transparent; 
 	  -webkit-text-stroke-width: 1px;
 	  -webkit-text-stroke-color: $white;
 	}
@@ -1002,10 +1002,8 @@ textarea.form-control {
 	padding-bottom: 120px;
 }
 
-// Map
 
 #map {
-	// height: 400px;
 	width: 100%;
 	@include media-breakpoint-down(md) {
 		height: 300px;
@@ -1058,9 +1056,7 @@ textarea.form-control {
 			display: block;
 			text-align: right;
 		}
-		// @include media-breakpoint-down(sm){
-		// 	font-size: 28px;
-		// }
+		
 	}
 	&.heading-section-white{
 		.subheading{
@@ -1076,7 +1072,6 @@ textarea.form-control {
 	}
 }
 
-//COVER BG
 .img,
 .blog-img,
 .user-img{
@@ -1086,7 +1081,6 @@ textarea.form-control {
 }
 
 
-//PORTFOLIO
 .portfolio-wrap{
 	display: block;
 	width: 100%;
@@ -1163,7 +1157,6 @@ textarea.form-control {
 	}
 }
 
-//////
 .portfolio-entry{
 	position: relative;
 	margin-bottom: 7em;
@@ -1253,7 +1246,6 @@ textarea.form-control {
 						.top{
 							transform: translateY(50%);
 							@include transition(.3s);
-							// z-index: 1;
 						}
 						.absolute{
 							opacity: 0;
@@ -1287,7 +1279,6 @@ textarea.form-control {
 }
 
 
-//TESTIMONY
 .testimony-section{
 	position: relative;
 	background: $darken;
@@ -1307,7 +1298,6 @@ textarea.form-control {
 		content: '';
 		opacity: .7;
 		background: $darken;
-		// @include gradient-background();
 	}
 	.owl-carousel{
 		margin: 0;
@@ -1322,7 +1312,6 @@ textarea.form-control {
 		bottom: 60px !important;
 		left: 0;
 		right: 0;
-		// max-width: 1200px;
 		margin: 0 auto;
 		@include media-breakpoint-down(md){
 			display: none;
@@ -1424,7 +1413,6 @@ textarea.form-control {
 		@include border-radius(4px);
 	}
 	p{
-		// font-size: 20px;
 		font-family: $font-tertiary;
 	}
 	.name{
@@ -1447,8 +1435,6 @@ textarea.form-control {
 	}
 }
 
-
-// magnific pop up
 
 .image-popup {
 	cursor: -webkit-zoom-in;
@@ -1495,7 +1481,6 @@ textarea.form-control {
 	}
 }
 .ftco-counter {
-	// padding: 6em 0;
 	@include media-breakpoint-down(lg){
 		background-position: center center !important;
 	}
@@ -1593,7 +1578,6 @@ textarea.form-control {
 	.box{
 		width: 100%;
 		display: block;
-		// background: $primary;
 		.icon{
 			width: 100px;
 			height: 100px;
@@ -1627,7 +1611,6 @@ textarea.form-control {
 }
 
 
-//### .block-21
 .block-21 {
 	.blog-img{
 		display: block;
@@ -1659,7 +1642,6 @@ textarea.form-control {
 	}
 }
 
-/* Blog*/
 .post-info {
 	font-size: 12px;
 	text-transform: uppercase;
