@@ -29,7 +29,6 @@ $primary: #fdcb6e;
 }
 
 html {
-	// overflow-x: hidden;
 }
 body {
 	font-family: $font-primary;
@@ -320,7 +319,6 @@ h1, h2, h3, h4, h5,
 	}
 }
 
-//OWL CAROUSEL
 .owl-carousel {
 	position: relative;
 	.owl-item {
@@ -572,7 +570,6 @@ h1, h2, h3, h4, h5,
 }
 
 
-// VOLUNTEER
 .ftco-volunteer{
 	.text{
 		h2{
@@ -604,8 +601,6 @@ h1, h2, h3, h4, h5,
 	}
 }
 
-//MISSION
-
 .container{
 	max-width: 1180px;
 }
@@ -622,12 +617,9 @@ h1, h2, h3, h4, h5,
 	background: #1e1e1e;
 }
 
-
-//BUTTON
 .btn {
 	cursor: pointer;
 	@include border-radius(3px);
-	// box-shadow: none!important;
 	-webkit-box-shadow: 0px 24px 36px -11px rgba(0,0,0,0.09);
 	-moz-box-shadow: 0px 24px 36px -11px rgba(0,0,0,0.09);
 	box-shadow: 0px 24px 36px -11px rgba(0,0,0,0.09);
@@ -692,7 +684,6 @@ h1, h2, h3, h4, h5,
 }
 
 
-//SERVICES
 .services-section{
 	padding: 0;
 }
@@ -753,7 +744,6 @@ h1, h2, h3, h4, h5,
 
 
 
-// USEFUL CODE
 .aside-stretch{
 	background: lighten($primary,10%);
 	&:after{
@@ -766,7 +756,6 @@ h1, h2, h3, h4, h5,
 		background: lighten($primary,10%);
 		border: 1px solid red;
 		z-index: -1;
-		// background: #333644;
 	}
 	@include media-breakpoint-down(sm){
 		background: transparent;
@@ -810,8 +799,6 @@ textarea.form-control {
 	background: $primary!important;
 }
 
-
-//ABOUT
 .media-custom{
 	background: $white;
 	.media-body{

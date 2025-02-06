@@ -1,9 +1,3 @@
-// stylelint-disable selector-no-qualifying-type
-
-//
-// Base styles
-//
-
 .btn {
   display: inline-block;
   font-family: $btn-font-family;
@@ -28,7 +22,6 @@
     box-shadow: $btn-focus-box-shadow;
   }
 
-  // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
     opacity: $btn-disabled-opacity;
@@ -45,16 +38,10 @@
   }
 }
 
-// Future-proof disabling of clicks on `<a>` elements
 a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none;
 }
-
-
-//
-// Alternate buttons
-//
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
@@ -68,12 +55,6 @@ fieldset:disabled a.btn {
   }
 }
 
-
-//
-// Link buttons
-//
-
-// Make a button look and behave like a link
 .btn-link {
   font-weight: $font-weight-normal;
   color: $link-color;
@@ -96,13 +77,8 @@ fieldset:disabled a.btn {
     pointer-events: none;
   }
 
-  // No need for an active state here
 }
 
-
-//
-// Button Sizes
-//
 
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
@@ -113,21 +89,15 @@ fieldset:disabled a.btn {
 }
 
 
-//
-// Block button
-//
-
 .btn-block {
   display: block;
   width: 100%;
 
-  // Vertically space out multiple block buttons
   + .btn-block {
     margin-top: $btn-block-spacing-y;
   }
 }
 
-// Specificity overrides
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {

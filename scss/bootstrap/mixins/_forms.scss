@@ -63,7 +63,6 @@
     }
   }
 
-  // stylelint-disable-next-line selector-no-qualifying-type
   textarea.form-control {
     .was-validated &:#{$state},
     &.is-#{$state} {
@@ -156,7 +155,6 @@
     }
   }
 
-  // custom file
   .custom-file-input {
     .was-validated &:#{$state},
     &.is-#{$state} {

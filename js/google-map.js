@@ -24,11 +24,10 @@ function init() {
     var mapElement = document.getElementById('map');
     var map = new google.maps.Map(mapElement, mapOptions);
 
-    // Gambar lokasi rumah langsung
     var houseLatlng = new google.maps.LatLng(-7.920075, 110.549967);
     var houseMarker = new google.maps.Marker({
         position: houseLatlng,
         map: map,
-        icon: 'images/loc.png'  // Pastikan path gambar benar
+        icon: 'images/loc.png'
     });
 }

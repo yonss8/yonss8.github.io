@@ -1,24 +1,15 @@
-// stylelint-disable selector-no-qualifying-type
-
-//
-// Base styles
-//
-
 .input-group {
   position: relative;
   display: flex;
-  flex-wrap: wrap; // For form validation feedback
-  align-items: stretch;
+  flex-wrap: wrap; 
   width: 100%;
 
   > .form-control,
   > .form-control-plaintext,
   > .custom-select,
   > .custom-file {
-    position: relative; // For focus state's z-index
+    position: relative; 
     flex: 1 1 auto;
-    // Add width 1% and flex-basis auto to ensure that button will not wrap out
-    // the column. Applies to IE Edge+ and Firefox. Chrome does not require this.
     width: 1%;
     margin-bottom: 0;
 
@@ -29,14 +20,12 @@
     }
   }
 
-  // Bring the "active" form control to the top of surrounding elements
   > .form-control:focus,
   > .custom-select:focus,
   > .custom-file .custom-file-input:focus ~ .custom-file-label {
     z-index: 3;
   }
 
-  // Bring the custom file input above the label
   > .custom-file .custom-file-input:focus {
     z-index: 4;
   }
@@ -47,8 +36,6 @@
     &:not(:first-child) { @include border-left-radius(0); }
   }
 
-  // Custom file inputs have more complex markup, thus requiring different
-  // border-radius overrides.
   > .custom-file {
     display: flex;
     align-items: center;
@@ -59,20 +46,10 @@
   }
 }
 
-
-// Prepend and append
-//
-// While it requires one extra layer of HTML for each, dedicated prepend and
-// append elements allow us to 1) be less clever, 2) simplify our selectors, and
-// 3) support HTML5 form validation.
-
 .input-group-prepend,
 .input-group-append {
   display: flex;
 
-  // Ensure buttons are always above inputs for more visually pleasing borders.
-  // This isn't needed for `.input-group-text` since it shares the same border-color
-  // as our inputs.
   .btn {
     position: relative;
     z-index: 2;
@@ -93,19 +70,11 @@
 .input-group-prepend { margin-right: -$input-border-width; }
 .input-group-append { margin-left: -$input-border-width; }
 
-
-// Textual addons
-//
-// Serves as a catch-all element for any text or radio/checkbox input you wish
-// to prepend or append to an input.
-
 .input-group-text {
   display: flex;
   align-items: center;
   padding: $input-padding-y $input-padding-x;
-  margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
-  @include font-size($input-font-size); // Match inputs
-  font-weight: $font-weight-normal;
+  margin-bottom: 0; 
   line-height: $input-line-height;
   color: $input-group-addon-color;
   text-align: center;
@@ -114,18 +83,12 @@
   border: $input-border-width solid $input-group-addon-border-color;
   @include border-radius($input-border-radius);
 
-  // Nuke default margins from checkboxes and radios to vertically center within.
   input[type="radio"],
   input[type="checkbox"] {
     margin-top: 0;
   }
 }
 
-
-// Sizing
-//
-// Remix the default form control sizing classes into new ones for easier
-// manipulation.
 
 .input-group-lg > .form-control:not(textarea),
 .input-group-lg > .custom-select {
@@ -165,14 +128,6 @@
 .input-group-sm > .custom-select {
   padding-right: $custom-select-padding-x + $custom-select-indicator-padding;
 }
-
-
-// Prepend and append rounded corners
-//
-// These rulesets must come after the sizing ones to properly override sm and lg
-// border-radius values when extending. They're more specific than we'd like
-// with the `.input-group >` part, but without it, we cannot override the sizing.
-
 
 .input-group > .input-group-prepend > .btn,
 .input-group > .input-group-prepend > .input-group-text,
