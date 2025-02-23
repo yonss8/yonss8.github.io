@@ -1,9 +1,3 @@
-// stylelint-disable property-blacklist, declaration-no-important
-
-//
-// Border
-//
-
 .border         { border: $border-width solid $border-color !important; }
 .border-top     { border-top: $border-width solid $border-color !important; }
 .border-right   { border-right: $border-width solid $border-color !important; }
@@ -25,10 +19,6 @@
 .border-white {
   border-color: $white !important;
 }
-
-//
-// Border-radius
-//
 
 .rounded-sm {
   border-radius: $border-radius-sm !important;

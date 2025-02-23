@@ -924,6 +924,7 @@ pre {
   .col-md-12 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
+    justify-content: left;
     flex: 0 0 100%;
     max-width: 100%; }
   .order-md-first {
@@ -8885,9 +8886,10 @@ textarea.form-control {
 
 #map {
   width: 100%; }
-  @media (max-width: 991.98px) {
+  @media (max-width: 5000px) {
     #map {
-      height: 300px; } }
+      height: 300px;
+      width: fit-content; } }
 
 @-webkit-keyframes pulse {
   0% {

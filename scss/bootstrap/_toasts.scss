@@ -1,6 +1,6 @@
 .toast {
   max-width: $toast-max-width;
-  overflow: hidden; // cheap rounded corners on nested items
+  overflow: hidden; 
   @include font-size($toast-font-size);
   color: $toast-color;
   background-color: $toast-background-color;
@@ -40,5 +40,5 @@
 }
 
 .toast-body {
-  padding: $toast-padding-x; // apply to both vertical and horizontal
+  padding: $toast-padding-x; 
 }

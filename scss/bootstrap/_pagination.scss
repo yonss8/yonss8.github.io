@@ -52,17 +52,12 @@
   &.disabled .page-link {
     color: $pagination-disabled-color;
     pointer-events: none;
-    // Opinionated: remove the "hand" cursor set previously for .page-link
     cursor: auto;
     background-color: $pagination-disabled-bg;
     border-color: $pagination-disabled-border-color;
   }
 }
 
-
-//
-// Sizing
-//
 
 .pagination-lg {
   @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);

@@ -1,10 +1,3 @@
-// Variables
-//
-// Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
-
-// Color system
-
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -18,7 +11,6 @@ $gray-900: #212529 !default;
 $black:    #000 !default;
 
 $grays: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
 $grays: map-merge(
   (
     "100": $gray-100,
@@ -46,7 +38,6 @@ $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
 $colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
   (
     "blue":       $blue,
@@ -76,7 +67,6 @@ $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
     "primary":    $primary,
@@ -91,20 +81,10 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
-// Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
-
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold:  150 !default;
-
-// Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark:             $gray-900 !default;
 $yiq-text-light:            $white !default;
-
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                                true !default;
 $enable-rounded:                              true !default;
@@ -112,7 +92,7 @@ $enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
 $enable-transitions:                          true !default;
 $enable-prefers-reduced-motion-media-query:   true !default;
-$enable-hover-media-query:                    false !default; // Deprecated, no longer affects any compiled CSS
+$enable-hover-media-query:                    false !default; 
 $enable-grid-classes:                         true !default;
 $enable-pointer-cursor-for-buttons:           true !default;
 $enable-print-styles:                         true !default;
@@ -121,15 +101,8 @@ $enable-validation-icons:                     true !default;
 $enable-deprecation-messages:                 true !default;
 
 
-// Spacing
-//
-// Control the default styling of most Bootstrap elements by modifying these
-// variables. Mostly focused on spacing.
-// You can add more entries to the $spacers map, should you need more variation.
-
 $spacer: 1rem !default;
 $spacers: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
   (
     0: 0,
@@ -142,9 +115,7 @@ $spacers: map-merge(
   $spacers
 );
 
-// This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
 $sizes: map-merge(
   (
     25: 25%,
@@ -157,36 +128,17 @@ $sizes: map-merge(
 );
 
 
-// Body
-//
-// Settings for the `<body>` element.
-
 $body-bg:                   $white !default;
 $body-color:                $gray-900 !default;
-
-
-// Links
-//
-// Style anchor elements.
 
 $link-color:                              theme-color("primary") !default;
 $link-decoration:                         none !default;
 $link-hover-color:                        darken($link-color, 15%) !default;
 $link-hover-decoration:                   underline !default;
-// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
-
-// Paragraphs
-//
-// Style p element.
 
 $paragraph-margin-bottom:   1rem !default;
 
-
-// Grid breakpoints
-//
-// Define the minimum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
   xs: 0,
@@ -200,10 +152,6 @@ $grid-breakpoints: (
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
 
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -214,17 +162,8 @@ $container-max-widths: (
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
 
-// Grid columns
-//
-// Set the number of columns and specify the width of the gutters.
-
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
-
-
-// Components
-//
-// Define common padding and border radius sizes and more.
 
 $line-height-lg:              1.5 !default;
 $line-height-sm:              1.5 !default;
@@ -254,7 +193,6 @@ $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
 
 $embed-responsive-aspect-ratios: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
 $embed-responsive-aspect-ratios: join(
   (
     (21 9),
@@ -265,17 +203,11 @@ $embed-responsive-aspect-ratios: join(
   $embed-responsive-aspect-ratios
 );
 
-// Typography
-//
-// Font, line-height, and color for body text, headings, and more.
-
-// stylelint-disable value-keyword-case
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
-// stylelint-enable value-keyword-case
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              1rem !default; 
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
@@ -339,11 +271,6 @@ $mark-bg:                     #fcf8e3 !default;
 
 $hr-margin-y:                 $spacer !default;
 
-
-// Tables
-//
-// Customizes the `.table` component with basic values, each used across all table variations.
-
 $table-cell-padding:          .75rem !default;
 $table-cell-padding-sm:       .3rem !default;
 
@@ -375,11 +302,6 @@ $table-caption-color:         $text-muted !default;
 $table-bg-level:              -9 !default;
 $table-border-level:          -6 !default;
 
-
-// Buttons + Forms
-//
-// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
-
 $input-btn-padding-y:         .375rem !default;
 $input-btn-padding-x:         .75rem !default;
 $input-btn-font-family:       null !default;
@@ -401,11 +323,6 @@ $input-btn-font-size-lg:      $font-size-lg !default;
 $input-btn-line-height-lg:    $line-height-lg !default;
 
 $input-btn-border-width:      $border-width !default;
-
-
-// Buttons
-//
-// For each of Bootstrap's buttons, define text, background, and border color.
 
 $btn-padding-y:               $input-btn-padding-y !default;
 $btn-padding-x:               $input-btn-padding-x !default;
@@ -436,15 +353,11 @@ $btn-link-disabled-color:     $gray-600 !default;
 
 $btn-block-spacing-y:         .5rem !default;
 
-// Allows for customizing button radius independently from global border radius
 $btn-border-radius:           $border-radius !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
-
-
-// Forms
 
 $label-margin-bottom:                   .5rem !default;
 
@@ -565,14 +478,14 @@ $custom-select-padding-x:           $input-padding-x !default;
 $custom-select-font-family:         $input-font-family !default;
 $custom-select-font-size:           $input-font-size !default;
 $custom-select-height:              $input-height !default;
-$custom-select-indicator-padding:   1rem !default; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-indicator-padding:   1rem !default; 
 $custom-select-font-weight:         $input-font-weight !default;
 $custom-select-line-height:         $input-line-height !default;
 $custom-select-color:               $input-color !default;
 $custom-select-disabled-color:      $gray-600 !default;
 $custom-select-bg:                  $input-bg !default;
 $custom-select-disabled-bg:         $gray-200 !default;
-$custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
+$custom-select-bg-size:             8px 10px !default; 
 $custom-select-indicator-color:     $gray-800 !default;
 $custom-select-indicator:           str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"), "#", "%23") !default;
 $custom-select-background:          $custom-select-indicator no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
@@ -614,7 +527,7 @@ $custom-range-thumb-border:                  0 !default;
 $custom-range-thumb-border-radius:           1rem !default;
 $custom-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;
 $custom-range-thumb-focus-box-shadow:        0 0 0 1px $body-bg, $input-focus-box-shadow !default;
-$custom-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in IE/Edge
+$custom-range-thumb-focus-box-shadow-width:  $input-focus-width !default; 
 $custom-range-thumb-active-bg:               lighten($component-active-bg, 35%) !default;
 $custom-range-thumb-disabled-bg:             $gray-500 !default;
 
@@ -641,9 +554,6 @@ $custom-file-text: (
   en: "Browse"
 ) !default;
 
-
-// Form validation
-
 $form-feedback-margin-top:          $form-text-margin-top !default;
 $form-feedback-font-size:           $small-font-size !default;
 $form-feedback-valid-color:         theme-color("success") !default;
@@ -655,7 +565,6 @@ $form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
 $form-feedback-icon-invalid:        str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$form-feedback-icon-invalid-color}' viewBox='-2 -2 7 7'%3e%3cpath stroke='#{$form-feedback-icon-invalid-color}' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E"), "#", "%23") !default;
 
 $form-validation-states: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
 $form-validation-states: map-merge(
   (
     "valid": (
@@ -670,11 +579,6 @@ $form-validation-states: map-merge(
   $form-validation-states
 );
 
-// Z-index master list
-//
-// Warning: Avoid customizing these values. They're used for a bird's eye view
-// of components dependent on the z-axis and are designed to all work together.
-
 $zindex-dropdown:                   1000 !default;
 $zindex-sticky:                     1020 !default;
 $zindex-fixed:                      1030 !default;
@@ -682,9 +586,6 @@ $zindex-modal-backdrop:             1040 !default;
 $zindex-modal:                      1050 !default;
 $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
-
-
-// Navs
 
 $nav-link-padding-y:                .5rem !default;
 $nav-link-padding-x:                1rem !default;
@@ -705,16 +606,12 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 $nav-divider-color:                 $gray-200 !default;
 $nav-divider-margin-y:              $spacer / 2 !default;
 
-
-// Navbar
-
 $navbar-padding-y:                  $spacer / 2 !default;
 $navbar-padding-x:                  $spacer !default;
 
 $navbar-nav-link-padding-x:         .5rem !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
-// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
 $navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
@@ -742,11 +639,6 @@ $navbar-light-brand-color:                $navbar-light-active-color !default;
 $navbar-light-brand-hover-color:          $navbar-light-active-color !default;
 $navbar-dark-brand-color:                 $navbar-dark-active-color !default;
 $navbar-dark-brand-hover-color:           $navbar-dark-active-color !default;
-
-
-// Dropdowns
-//
-// Dropdown menu container and contents.
 
 $dropdown-min-width:                10rem !default;
 $dropdown-padding-y:                .5rem !default;
@@ -776,9 +668,6 @@ $dropdown-item-padding-x:           1.5rem !default;
 
 $dropdown-header-color:             $gray-600 !default;
 
-
-// Pagination
-
 $pagination-padding-y:              .5rem !default;
 $pagination-padding-x:              .75rem !default;
 $pagination-padding-y-sm:           .25rem !default;
@@ -807,15 +696,9 @@ $pagination-disabled-color:         $gray-600 !default;
 $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $gray-300 !default;
 
-
-// Jumbotron
-
 $jumbotron-padding:                 2rem !default;
 $jumbotron-color:                   null !default;
 $jumbotron-bg:                      $gray-200 !default;
-
-
-// Cards
 
 $card-spacer-y:                     .75rem !default;
 $card-spacer-x:                     1.25rem !default;
@@ -837,9 +720,6 @@ $card-columns-count:                3 !default;
 $card-columns-gap:                  1.25rem !default;
 $card-columns-margin:               $card-spacer-y !default;
 
-
-// Tooltips
-
 $tooltip-font-size:                 $font-size-sm !default;
 $tooltip-max-width:                 200px !default;
 $tooltip-color:                     $white !default;
@@ -854,16 +734,12 @@ $tooltip-arrow-width:               .8rem !default;
 $tooltip-arrow-height:              .4rem !default;
 $tooltip-arrow-color:               $tooltip-bg !default;
 
-// Form tooltips must come after regular tooltips
 $form-feedback-tooltip-padding-y:     $tooltip-padding-y !default;
 $form-feedback-tooltip-padding-x:     $tooltip-padding-x !default;
 $form-feedback-tooltip-font-size:     $tooltip-font-size !default;
 $form-feedback-tooltip-line-height:   $line-height-base !default;
 $form-feedback-tooltip-opacity:       $tooltip-opacity !default;
 $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
-
-
-// Popovers
 
 $popover-font-size:                 $font-size-sm !default;
 $popover-bg:                        $white !default;
@@ -888,9 +764,6 @@ $popover-arrow-color:               $popover-bg !default;
 
 $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
 
-
-// Toasts
-
 $toast-max-width:                   350px !default;
 $toast-padding-x:                   .75rem !default;
 $toast-padding-y:                   .25rem !default;
@@ -906,9 +779,6 @@ $toast-header-color:                $gray-600 !default;
 $toast-header-background-color:     rgba($white, .85) !default;
 $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 
-
-// Badges
-
 $badge-font-size:                   75% !default;
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-padding-y:                   .25em !default;
@@ -919,14 +789,8 @@ $badge-transition:                  $btn-transition !default;
 $badge-focus-width:                 $input-btn-focus-width !default;
 
 $badge-pill-padding-x:              .6em !default;
-// Use a higher than normal value to ensure completely rounded edges when
-// customizing padding or font-size on labels.
 $badge-pill-border-radius:          10rem !default;
 
-
-// Modals
-
-// Padding applied to the modal body
 $modal-inner-padding:               1rem !default;
 
 $modal-dialog-margin:               .5rem !default;
@@ -950,7 +814,7 @@ $modal-header-border-width:         $modal-content-border-width !default;
 $modal-footer-border-width:         $modal-header-border-width !default;
 $modal-header-padding-y:            1rem !default;
 $modal-header-padding-x:            1rem !default;
-$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
+$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; 
 
 $modal-xl:                          1140px !default;
 $modal-lg:                          800px !default;
@@ -960,11 +824,6 @@ $modal-sm:                          300px !default;
 $modal-fade-transform:              translate(0, -50px) !default;
 $modal-show-transform:              none !default;
 $modal-transition:                  transform .3s ease-out !default;
-
-
-// Alerts
-//
-// Define alert colors, border radius, and padding.
 
 $alert-padding-y:                   .75rem !default;
 $alert-padding-x:                   1.25rem !default;
@@ -977,9 +836,6 @@ $alert-bg-level:                    -10 !default;
 $alert-border-level:                -9 !default;
 $alert-color-level:                 6 !default;
 
-
-// Progress bars
-
 $progress-height:                   1rem !default;
 $progress-font-size:                $font-size-base * .75 !default;
 $progress-bg:                       $gray-200 !default;
@@ -989,9 +845,6 @@ $progress-bar-color:                $white !default;
 $progress-bar-bg:                   theme-color("primary") !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
-
-
-// List group
 
 $list-group-color:                  null !default;
 $list-group-bg:                     $white !default;
@@ -1016,9 +869,6 @@ $list-group-action-hover-color:     $list-group-action-color !default;
 $list-group-action-active-color:    $body-color !default;
 $list-group-action-active-bg:       $gray-200 !default;
 
-
-// Image thumbnails
-
 $thumbnail-padding:                 .25rem !default;
 $thumbnail-bg:                      $body-bg !default;
 $thumbnail-border-width:            $border-width !default;
@@ -1026,14 +876,8 @@ $thumbnail-border-color:            $gray-300 !default;
 $thumbnail-border-radius:           $border-radius !default;
 $thumbnail-box-shadow:              0 1px 2px rgba($black, .075) !default;
 
-
-// Figures
-
 $figure-caption-font-size:          90% !default;
 $figure-caption-color:              $gray-600 !default;
-
-
-// Breadcrumbs
 
 $breadcrumb-padding-y:              .75rem !default;
 $breadcrumb-padding-x:              1rem !default;
@@ -1047,9 +891,6 @@ $breadcrumb-active-color:           $gray-600 !default;
 $breadcrumb-divider:                quote("/") !default;
 
 $breadcrumb-border-radius:          $border-radius !default;
-
-
-// Carousel
 
 $carousel-control-color:             $white !default;
 $carousel-control-width:             15% !default;
@@ -1073,10 +914,8 @@ $carousel-control-prev-icon-bg:      str-replace(url("data:image/svg+xml,%3csvg 
 $carousel-control-next-icon-bg:      str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e"), "#", "%23") !default;
 
 $carousel-transition-duration:       .6s !default;
-$carousel-transition:                transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+$carousel-transition:                transform $carousel-transition-duration ease-in-out !default; 
 
-
-// Spinners
 
 $spinner-width:         2rem !default;
 $spinner-height:        $spinner-width !default;
@@ -1087,15 +926,11 @@ $spinner-height-sm:       $spinner-width-sm !default;
 $spinner-border-width-sm: .2em !default;
 
 
-// Close
-
 $close-font-size:                   $font-size-base * 1.5 !default;
 $close-font-weight:                 $font-weight-bold !default;
 $close-color:                       $black !default;
 $close-text-shadow:                 0 1px 0 $white !default;
 
-
-// Code
 
 $code-font-size:                    87.5% !default;
 $code-color:                        $pink !default;
@@ -1110,14 +945,10 @@ $pre-color:                         $gray-900 !default;
 $pre-scrollable-max-height:         340px !default;
 
 
-// Utilities
-
 $displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
 $overflows: auto, hidden !default;
 $positions: static, relative, absolute, fixed, sticky !default;
 
-
-// Printing
 
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
