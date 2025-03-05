@@ -1190,3 +1190,52 @@ section,
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .hero-section {
+    padding: 50px 10px;
+    text-align: center;
+  }
+  
+  .hero-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+}
